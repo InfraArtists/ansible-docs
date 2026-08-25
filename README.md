@@ -4,3 +4,7 @@ My hands-on experience with Ansible (all videos available on my YouTube channel 
 
 Automation for Everything, Everyone, Everywhere.
 
+## Videos
+
+- [Ansible Ad-hoc Commands](https://youtu.be/lEslSiQ5XHw)
+
