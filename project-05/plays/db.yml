@@ -1,0 +1,5 @@
+---
+- hosts: youtube-server
+  roles:
+    - database
+

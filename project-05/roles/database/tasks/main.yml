@@ -1,0 +1,41 @@
+---
+- name: Create directory in /home
+  ansible.builtin.file:
+    path: /home/dir1_role
+    state: directory
+    owner: milad
+    #group: root
+    mode: "0400"
+  tags:
+    - create_dir
+
+- name: Create dir2 in /home
+  ansible.builtin.file:
+    path: /home/dir2_role
+    state: directory
+  tags:
+    - create_dir
+
+- name: Install tree package
+  ansible.builtin.apt:
+    name: tree
+    state: present
+    update_cache: true
+  tags:
+    - package
+
+- name: Create file in /home/dir1_role
+  ansible.builtin.file:
+    path: /home/dir1_role/file111111
+    state: touch
+  tags:
+    - create_file
+
+- name: Install nginx package
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+    update_cache: true
+  tags:
+    - package
+
